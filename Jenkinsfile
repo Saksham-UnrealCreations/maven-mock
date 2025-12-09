@@ -1,14 +1,6 @@
 node {
 def mavenHome = tool name: "maven-1"
 
-echo "jenkins url is: --> ${env.JENKINS_URL}"
-
-echo "jenkins node is: --> ${env.NODE_NAME}"
-
-echo "jenkins JOB NAME is: --> ${env.JOB_NAME}"
-
-properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5'))])
-//checkout stage
 stage('checkout'){
 
 git 'https://github.com/sanchitraj35/maven-test.git'
