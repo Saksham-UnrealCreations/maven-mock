@@ -4,11 +4,11 @@ agent any
 environment{
 DOCKER_IMAGE = "sakshamb07/mavenapp"
 IMAGE_TAG = "${BUILD_NUMBER}"
-RELEASE_NAME = "mavenapp
-HELM_CHART = "./helm/mavenmock
+RELEASE_NAME = "mavenapp"
+HELM_CHART = "./helm"
 }
 
-def mavenHome = tool name: "maven-1"
+def mavenHome = tool name: "maven 1"
 
 echo "the job name is : ---> ${env.JOB_NAME}"
 
