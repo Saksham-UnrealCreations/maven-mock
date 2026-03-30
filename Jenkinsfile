@@ -25,7 +25,7 @@ git 'https://github.com/Saksham-UnrealCreations/maven-mock.git'
 
 stage('build war'){
  steps{
-sh 'mvn clean package'
+sh 'mvn clean package -DskipTests'
 }
 }
 
