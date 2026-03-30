@@ -31,7 +31,7 @@ sh 'mvn clean package'
 
 stage('Build Docker Image'){
 steps{
-sh 'docker build -t $DOCKER_IMAGE:$IMAGE_TAG'
+sh 'docker build -t $DOCKER_IMAGE:$IMAGE_TAG .'
 }
 }
 
