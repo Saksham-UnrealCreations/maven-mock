@@ -8,13 +8,13 @@ RELEASE_NAME = "mavenapp"
 HELM_CHART = "./helm"
 }
 
-def mavenHome = tool name: "maven 1"
+//def mavenHome = tool name: "maven 1"
 
-echo "the job name is : ---> ${env.JOB_NAME}"
+//echo "the job name is : ---> ${env.JOB_NAME}"
 
-echo "this build number is: --> ${env.BUILD_NUMBER}"
+//echo "this build number is: --> ${env.BUILD_NUMBER}"
 
-properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5'))])
+//properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5'))])
 
 stage('git checkout'){
 steps{
@@ -24,8 +24,7 @@ git 'https://github.com/Saksham-UnrealCreations/maven-mock.git'
 
 stage('build war'){
  steps{
-
-sh '$mavenHome/bin/mvn clean package'
+sh 'mvn clean package'
 }
 }
 
