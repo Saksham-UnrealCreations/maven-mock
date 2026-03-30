@@ -1,0 +1,59 @@
+pipeline {
+agent any
+
+environment{
+DOCKER_IMAGE = "sakshamb07/mavenapp"
+IMAGE_TAG = "${BUILD_NUMBER}"
+RELEASE_NAME = "mavenapp
+HELM_CHART = "./helm/mavenmock
+}
+
+def mavenHome = tool name: "maven-1"
+
+echo "the job name is : ---> ${env.JOB_NAME}"
+
+echo "this build number is: --> ${env.BUILD_NUMBER}"
+
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5'))])
+
+stage('git checkout'){
+
+git 'https://github.com/Saksham-UnrealCreations/maven-mock.git'
+}
+
+stage('build war'){
+ steps{
+
+sh "$mavenHome/bin/mvn clean package"
+}
+}
+
+stage('Build Docker Image')
+steps{
+sh "docker build -t $DOCKER_IMAGE:$IMAGE_TAG"
+}
+}
+
+stage('push image'){
+steps{
+withCredentials([usernamePassword(
+credentialsID: 'docker-creds'
+usernameVariable: 'DOCKER_USER'
+passwordVariable: 'DOCKER_PASS'
+)]) {
+sh "echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin"
+sh "docker push $DOCKER_IMAGE:$IMAGE_TAG
+}
+}
+}
+
+stage('Deploy via HELM'){
+steps{
+sh """
+helm upgrade --install $RELEASE_NAME $HELM_CHART \
+--set image.repository=$DOCKER_IMAGE \
+--set image.tag=$IMAGE_TAG
+"""
+}
+}
+}
