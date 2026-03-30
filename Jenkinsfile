@@ -61,5 +61,6 @@ helm upgrade --install $RELEASE_NAME $HELM_CHART \
 }
 }
 }
+}
  
 }
