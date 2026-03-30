@@ -1,0 +1,4 @@
+from tomcat:9.0-jdk17
+COPY target/*.war usr/local/tomcat/webapps/demoapp.war
+EXPOSE 8080
+CMD ["cataline.sh", "run"]
