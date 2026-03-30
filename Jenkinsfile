@@ -50,7 +50,7 @@ sh 'docker push $DOCKER_IMAGE:$IMAGE_TAG'
 
 stage('Deploy via HELM'){
 steps{
-withCredentials([file(credentialsId: 'k8s-config', variable: 'KUBECONFIG_FILE')])) {
+withCredentials([file(credentialsId: 'k8s-config', variable: 'KUBECONFIG_FILE')]) {
 sh """
 export KUBECONFIG=$KUBECONFIG_FILE
 helm upgrade --install $RELEASE_NAME $HELM_CHART \
