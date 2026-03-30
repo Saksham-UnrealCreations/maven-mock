@@ -2,6 +2,7 @@ replica: 2
 
 image:
   repository: sakshamb07/mavenapp
+  tag: "1"
   imagePullPolicy: IfNotPresent
 
 service:
