@@ -24,13 +24,13 @@ git 'https://github.com/Saksham-UnrealCreations/maven-mock.git'
 stage('build war'){
  steps{
 
-sh "$mavenHome/bin/mvn clean package"
+sh '$mavenHome/bin/mvn clean package'
 }
 }
 
 stage('Build Docker Image')
 steps{
-sh "docker build -t $DOCKER_IMAGE:$IMAGE_TAG"
+sh 'docker build -t $DOCKER_IMAGE:$IMAGE_TAG'
 }
 }
 
@@ -41,8 +41,8 @@ credentialsID: 'docker-creds',
 usernameVariable: 'DOCKER_USER',
 passwordVariable: 'DOCKER_PASS'
 )]) {
-sh "echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin"
-sh "docker push $DOCKER_IMAGE:$IMAGE_TAG
+sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+sh 'docker push $DOCKER_IMAGE:$IMAGE_TAG'
 }
 }
 }
