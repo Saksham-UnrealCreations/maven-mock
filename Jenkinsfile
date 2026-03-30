@@ -17,8 +17,9 @@ echo "this build number is: --> ${env.BUILD_NUMBER}"
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5'))])
 
 stage('git checkout'){
-
+steps{
 git 'https://github.com/Saksham-UnrealCreations/maven-mock.git'
+}
 }
 
 stage('build war'){
@@ -28,7 +29,7 @@ sh '$mavenHome/bin/mvn clean package'
 }
 }
 
-stage('Build Docker Image')
+stage('Build Docker Image'){
 steps{
 sh 'docker build -t $DOCKER_IMAGE:$IMAGE_TAG'
 }
