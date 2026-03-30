@@ -16,6 +16,7 @@ HELM_CHART = "./helm"
 
 //properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5'))])
 
+stages{
 stage('git checkout'){
 steps{
 git 'https://github.com/Saksham-UnrealCreations/maven-mock.git'
@@ -54,6 +55,7 @@ helm upgrade --install $RELEASE_NAME $HELM_CHART \
 --set image.repository=$DOCKER_IMAGE \
 --set image.tag=$IMAGE_TAG
 """
+}
 }
 }
 }
