@@ -23,7 +23,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saksham Bahuguna | DevOps Portfolio</title>
+    <title>Sarthak Bahuguna | DevOps Portfolio</title>
 
     <style>
         * {
@@ -365,14 +365,14 @@
     <div class="container">
 
         <div class="navbar">
-            <div class="brand">Saksham Bahuguna</div>
+            <div class="brand">Sarthak Bahuguna</div>
             <div class="nav-right">DevOps Portfolio Application</div>
         </div>
 
         <section class="hero">
             <div class="hero-left">
                 <div class="tag">Live Deployment Demo</div>
-                <h1>Hello, I'm <span>Saksham Bahuguna</span></h1>
+                <h1>Hello, I'm <span>Sarthak Bahuguna</span></h1>
                 <h2>DevOps Engineer | Cloud Enthusiast | CI/CD | Kubernetes | AWS</h2>
                 <p>
                     This is my personal JSP-based portfolio application built to showcase hands-on experience in
@@ -382,7 +382,7 @@
                 </p>
 
                 <div class="button-group">
-                    <a href="mailto:saksham18bahuguna@gmail.com" class="btn btn-primary">Contact Me</a>
+                    <a href="mailto:bahuguna.sarthak13@gmail.com" class="btn btn-primary">Contact Me</a>
                     <a href="#projects" class="btn btn-secondary">View Projects</a>
                 </div>
             </div>
@@ -392,7 +392,7 @@
                 <div class="quick-info">
                     <div>
                         <span>Location</span>
-                        Uttarakhand, India
+                        Meerut, Uttar Pradesh, India
                     </div>
                     <div>
                         <span>Primary Focus</span>
@@ -505,14 +505,14 @@
             <div class="contact-grid">
                 <div class="contact-card">
                     <h3>Personal Details</h3>
-                    <p><strong>Name:</strong> Saksham Bahuguna</p>
-                    <p><strong>Location:</strong> Uttarakhand, India</p>
+                    <p><strong>Name:</strong> Sarthak Bahuguna</p>
+                    <p><strong>Location:</strong> Meerut, Uttar Pradesh, India</p>
                     <p><strong>Role:</strong> DevOps / Cloud Engineer</p>
                 </div>
 
                 <div class="contact-card">
                     <h3>Contact</h3>
-                    <p><strong>Email:</strong> <a href="mailto:saksham18bahuguna@gmail.com">saksham18bahuguna@gmail.com</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:bahuguna.sarthak13@gmail.com">bahuguna.sarthak13@gmail.com</a></p>
                     <p><strong>Project Type:</strong> Interview Portfolio Application</p>
                     <p><strong>Status:</strong> Active Demo Build</p>
                 </div>
@@ -520,7 +520,7 @@
         </section>
 
         <div class="footer">
-            <p>Built and deployed by <strong>Saksham Bahuguna</strong></p>
+            <p>Built and deployed by <strong>Sarthak Bahuguna</strong></p>
             <p>© 2026 Personal DevOps Portfolio | JSP + Tomcat + Deployment Showcase</p>
         </div>
 
