@@ -505,7 +505,7 @@
             <div class="contact-grid">
                 <div class="contact-card">
                     <h3>Personal Details</h3>
-                    <p><strong>Name:</strong>Saksham Bahuguna</p>
+                    <p><strong>Name:</strong> Saksham Bahuguna</p>
                     <p><strong>Location:</strong> Uttarakhand, India</p>
                     <p><strong>Role:</strong> DevOps / Cloud Engineer</p>
                 </div>
